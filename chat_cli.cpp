@@ -68,7 +68,7 @@ void parse_cmd(char *cmdline, int sock, struct sockaddr_in *servaddr)
 			return;
 		}
 
-		*p2 = '\n';
+		*p2 = '\0';
 		strcpy(peername, p);
 		while(*p2++ == ' ');
 		strcpy(msg, p2);
